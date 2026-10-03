@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Transportes Guliana | Fletes y Mudanzas en Santiago</title>
@@ -9,6 +11,11 @@
 <meta name="description" content="Transportes Guliana. Fletes y mudanzas en Santiago y Región Metropolitana. Traslado de muebles, electrodomésticos y pertenencias. Cotiza directamente por WhatsApp.">
 
 <style>
+
+/* =========================
+   GENERAL
+========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -31,13 +38,23 @@ a {
     color: inherit;
 }
 
+img {
+    max-width: 100%;
+    display: block;
+}
+
 :root {
     --orange: #f58220;
     --orange-dark: #d9650c;
+
+    --whatsapp: #25D366;
+    --whatsapp-dark: #1da851;
+
     --black: #080808;
     --dark: #111111;
     --gray: #1b1b1b;
-    --text: #ffffff;
+
+    --white: #ffffff;
     --muted: #b8b8b8;
 }
 
@@ -45,6 +62,7 @@ a {
     width: min(1150px, 92%);
     margin: auto;
 }
+
 
 /* =========================
    HEADER
@@ -54,37 +72,52 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+
     width: 100%;
+
     z-index: 1000;
-    background: rgba(0,0,0,0.94);
+
+    background: rgba(0,0,0,0.95);
+
     border-bottom: 1px solid rgba(255,255,255,0.08);
+
     backdrop-filter: blur(10px);
 }
 
 .nav {
-    min-height: 76px;
+    min-height: 78px;
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
+
     gap: 20px;
 }
 
 .logo-area {
     display: flex;
+
     align-items: center;
+
     gap: 12px;
 }
 
 .logo {
     width: 58px;
     height: 58px;
+
     object-fit: contain;
+
     border-radius: 8px;
 }
 
 .logo-name {
     font-size: 15px;
+
     font-weight: 900;
+
     letter-spacing: 1px;
 }
 
@@ -92,18 +125,56 @@ header {
     color: var(--orange);
 }
 
+
+/* BOTÓN WHATSAPP HEADER */
+
 .nav-btn {
-    background: var(--orange);
-    color: #fff;
-    padding: 11px 20px;
-    border-radius: 6px;
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    background: var(--whatsapp);
+
+    color: #ffffff;
+
+    padding: 12px 20px;
+
+    border-radius: 7px;
+
     font-size: 14px;
+
     font-weight: 900;
+
+    transition: 0.2s;
 }
 
 .nav-btn:hover {
-    background: var(--orange-dark);
+    background: var(--whatsapp-dark);
+
+    transform: translateY(-2px);
 }
+
+
+/* =========================
+   ICONO WHATSAPP
+========================= */
+
+.wa-icon {
+    width: 21px;
+    height: 21px;
+
+    flex-shrink: 0;
+}
+
+.wa-icon-large {
+    width: 31px;
+    height: 31px;
+}
+
 
 /* =========================
    HERO
@@ -111,20 +182,29 @@ header {
 
 .hero {
     min-height: 100vh;
+
     display: flex;
+
     align-items: center;
-    padding: 130px 0 80px;
+
+    padding: 135px 0 80px;
+
     position: relative;
+
     overflow: hidden;
 
     background:
+
         linear-gradient(
             90deg,
             rgba(0,0,0,0.96) 0%,
             rgba(0,0,0,0.85) 42%,
-            rgba(0,0,0,0.50) 100%
+            rgba(0,0,0,0.48) 100%
         ),
-        url("camion-4.jpeg") center/cover no-repeat;
+
+        url("camion-1.jpeg")
+        center/cover
+        no-repeat;
 }
 
 .hero-content {
@@ -133,21 +213,33 @@ header {
 
 .badge {
     display: inline-block;
+
     color: var(--orange);
+
     border: 1px solid rgba(245,130,32,0.5);
+
     background: rgba(245,130,32,0.08);
+
     padding: 7px 14px;
+
     border-radius: 30px;
+
     font-size: 13px;
+
     font-weight: 800;
+
     margin-bottom: 22px;
 }
 
 h1 {
     font-size: clamp(44px, 7vw, 78px);
+
     line-height: 0.98;
+
     letter-spacing: -3px;
+
     font-weight: 900;
+
     margin-bottom: 25px;
 }
 
@@ -157,31 +249,58 @@ h1 span {
 
 .hero-text {
     font-size: 20px;
+
     color: #dedede;
+
     max-width: 620px;
+
     margin-bottom: 30px;
 }
 
+
+/* BOTÓN PRINCIPAL WHATSAPP */
+
 .cta {
-    display: inline-block;
-    background: var(--orange);
-    color: white;
-    padding: 17px 27px;
-    border-radius: 7px;
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    background: var(--whatsapp);
+
+    color: #ffffff;
+
+    padding: 17px 28px;
+
+    border-radius: 8px;
+
     font-size: 17px;
+
     font-weight: 900;
-    box-shadow: 0 10px 30px rgba(245,130,32,0.18);
+
+    box-shadow:
+        0 10px 30px rgba(37,211,102,0.18);
+
+    transition: 0.2s;
 }
 
 .cta:hover {
-    background: var(--orange-dark);
+    background: var(--whatsapp-dark);
+
+    transform: translateY(-2px);
 }
 
 .hero-location {
     margin-top: 18px;
+
     color: #aaa;
+
     font-size: 14px;
 }
+
 
 /* =========================
    STRIP
@@ -189,12 +308,16 @@ h1 span {
 
 .strip {
     background: var(--orange);
-    padding: 24px 0;
+
+    padding: 25px 0;
 }
 
 .strip-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
     text-align: center;
 }
 
@@ -204,6 +327,7 @@ h1 span {
 
 .strip-item strong {
     display: block;
+
     font-size: 20px;
 }
 
@@ -211,8 +335,9 @@ h1 span {
     font-size: 13px;
 }
 
+
 /* =========================
-   SECTIONS
+   SECCIONES
 ========================= */
 
 section {
@@ -221,30 +346,42 @@ section {
 
 .section-header {
     text-align: center;
+
     max-width: 750px;
-    margin: 0 auto 50px;
+
+    margin:
+        0 auto
+        50px;
 }
 
 .section-header small {
     color: var(--orange);
+
     font-weight: 900;
+
     letter-spacing: 2px;
+
     text-transform: uppercase;
 }
 
 .section-header h2 {
-    font-size: clamp(34px, 5vw, 52px);
+    font-size:
+        clamp(34px, 5vw, 52px);
+
     line-height: 1.05;
+
     margin-top: 10px;
 }
 
 .section-header p {
     color: var(--muted);
+
     margin-top: 15px;
 }
 
+
 /* =========================
-   SERVICES
+   SERVICIOS
 ========================= */
 
 .services {
@@ -253,42 +390,56 @@ section {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
     gap: 18px;
 }
 
 .service {
     background: #171717;
+
     border: 1px solid #292929;
+
     border-radius: 10px;
+
     padding: 30px 25px;
-    transition: .2s;
+
+    transition: 0.2s;
 }
 
 .service:hover {
     transform: translateY(-4px);
+
     border-color: var(--orange);
 }
 
 .service-number {
     color: var(--orange);
+
     font-weight: 900;
+
     font-size: 13px;
+
     margin-bottom: 15px;
 }
 
 .service h3 {
     font-size: 21px;
+
     margin-bottom: 9px;
 }
 
 .service p {
     color: #aaa;
+
     font-size: 15px;
 }
 
+
 /* =========================
-   GALLERY
+   GALERÍA
 ========================= */
 
 .gallery {
@@ -297,30 +448,40 @@ section {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
     gap: 16px;
 }
 
 .photo {
     height: 300px;
+
     border-radius: 10px;
+
     overflow: hidden;
+
     background: #151515;
 }
 
 .photo img {
     width: 100%;
+
     height: 100%;
+
     object-fit: cover;
-    transition: .4s;
+
+    transition: 0.4s;
 }
 
 .photo:hover img {
     transform: scale(1.05);
 }
 
+
 /* =========================
-   PRESENTATION
+   PRESENTACIÓN
 ========================= */
 
 .presentation {
@@ -329,26 +490,37 @@ section {
 
 .presentation-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+
+    grid-template-columns:
+        1fr 1fr;
+
     gap: 55px;
+
     align-items: center;
 }
 
 .presentation-image {
     height: 500px;
+
     border-radius: 12px;
+
     overflow: hidden;
 }
 
 .presentation-image img {
     width: 100%;
+
     height: 100%;
+
     object-fit: cover;
 }
 
 .presentation-text h2 {
-    font-size: clamp(34px, 5vw, 50px);
+    font-size:
+        clamp(34px, 5vw, 50px);
+
     line-height: 1.05;
+
     margin-bottom: 20px;
 }
 
@@ -358,39 +530,53 @@ section {
 
 .presentation-text > p {
     color: #aaa;
+
     margin-bottom: 28px;
 }
 
 .feature {
     display: flex;
+
     gap: 14px;
+
     margin-bottom: 20px;
 }
 
 .feature-icon {
     width: 28px;
+
     height: 28px;
+
     flex-shrink: 0;
+
     border-radius: 50%;
+
     background: var(--orange);
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     font-weight: 900;
 }
 
 .feature h3 {
     font-size: 17px;
+
     margin-bottom: 2px;
 }
 
 .feature p {
     color: #999;
+
     font-size: 14px;
 }
 
+
 /* =========================
-   PROCESS
+   PROCESO
 ========================= */
 
 .process {
@@ -399,25 +585,40 @@ section {
 
 .process-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
     gap: 20px;
 }
 
 .process-card {
     text-align: center;
+
     padding: 25px;
 }
 
 .process-number {
     width: 58px;
+
     height: 58px;
-    margin: 0 auto 18px;
+
+    margin:
+        0 auto
+        18px;
+
     border-radius: 50%;
+
     background: var(--orange);
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     font-size: 22px;
+
     font-weight: 900;
 }
 
@@ -427,48 +628,84 @@ section {
 
 .process-card p {
     color: #999;
+
     font-size: 14px;
 }
 
+
 /* =========================
-   FINAL CTA
+   CTA FINAL
 ========================= */
 
 .final-cta {
+
     text-align: center;
+
     background:
+
         linear-gradient(
             rgba(245,130,32,0.93),
             rgba(245,130,32,0.93)
         ),
-        url("camion-5.jpeg") center/cover no-repeat;
+
+        url("camion-5.jpeg")
+        center/cover
+        no-repeat;
 }
 
 .final-cta h2 {
-    font-size: clamp(35px, 6vw, 60px);
+    font-size:
+        clamp(35px, 6vw, 60px);
+
     line-height: 1;
+
     margin-bottom: 18px;
 }
 
 .final-cta p {
     font-size: 18px;
+
     max-width: 650px;
-    margin: 0 auto 30px;
+
+    margin:
+        0 auto
+        30px;
 }
 
+
+/* BOTÓN FINAL WHATSAPP */
+
 .dark-btn {
-    display: inline-block;
-    background: #080808;
-    color: #fff;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    background: var(--whatsapp);
+
+    color: #ffffff;
+
     padding: 17px 28px;
-    border-radius: 7px;
+
+    border-radius: 8px;
+
     font-size: 17px;
+
     font-weight: 900;
+
+    transition: 0.2s;
 }
 
 .dark-btn:hover {
-    background: #1c1c1c;
+    background: var(--whatsapp-dark);
+
+    transform: translateY(-2px);
 }
+
 
 /* =========================
    FOOTER
@@ -476,14 +713,20 @@ section {
 
 footer {
     background: #050505;
+
     text-align: center;
+
     padding: 45px 0 100px;
+
     border-top: 1px solid #222;
 }
 
 .footer-logo {
     width: 75px;
-    margin: 0 auto 15px;
+
+    margin:
+        0 auto
+        15px;
 }
 
 footer h3 {
@@ -492,41 +735,69 @@ footer h3 {
 
 footer p {
     color: #777;
+
     font-size: 13px;
 }
 
 .whatsapp-number {
-    display: inline-block;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
     margin-top: 12px;
-    color: var(--orange);
+
+    color: var(--whatsapp);
+
     font-weight: 900;
 }
 
+
 /* =========================
-   WHATSAPP FLOAT
+   WHATSAPP FLOTANTE
 ========================= */
 
 .whatsapp {
+
     position: fixed;
+
     right: 20px;
+
     bottom: 20px;
-    width: 62px;
-    height: 62px;
+
+    width: 64px;
+
+    height: 64px;
+
     border-radius: 50%;
-    background: #25D366;
-    color: white;
+
+    background: var(--whatsapp);
+
+    color: #ffffff;
+
     z-index: 2000;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
-    font-size: 27px;
-    font-weight: 900;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.45);
+
+    box-shadow:
+        0 8px 25px
+        rgba(0,0,0,0.45);
+
+    transition: 0.2s;
 }
 
 .whatsapp:hover {
-    transform: scale(1.07);
+    transform: scale(1.08);
+
+    background: var(--whatsapp-dark);
 }
+
 
 /* =========================
    MOBILE
@@ -535,15 +806,18 @@ footer p {
 @media(max-width:850px) {
 
     .services-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+            1fr 1fr;
     }
 
     .gallery-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+            1fr 1fr;
     }
 
     .presentation-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
 
     .presentation-image {
@@ -551,9 +825,11 @@ footer p {
     }
 
     .process-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
 }
+
 
 @media(max-width:600px) {
 
@@ -575,17 +851,24 @@ footer p {
     }
 
     .nav-btn {
-        padding: 9px 12px;
-        font-size: 12px;
+        padding: 10px 12px;
+
+        font-size: 11px;
+
+        text-align: center;
     }
 
     .hero {
         min-height: 92vh;
-        padding: 120px 0 60px;
+
+        padding:
+            120px 0
+            60px;
     }
 
     h1 {
         font-size: 46px;
+
         letter-spacing: -2px;
     }
 
@@ -595,11 +878,13 @@ footer p {
 
     .cta {
         width: 100%;
+
         text-align: center;
     }
 
     .strip-grid {
         grid-template-columns: 1fr;
+
         gap: 12px;
     }
 
@@ -626,452 +911,791 @@ footer p {
 
     .dark-btn {
         width: 100%;
+
+        text-align: center;
     }
 
     .whatsapp {
-        width: 58px;
-        height: 58px;
+        width: 60px;
+
+        height: 60px;
+
         right: 15px;
+
         bottom: 15px;
     }
 }
+
 </style>
+
 </head>
+
 
 <body>
 
-<!-- HEADER -->
+
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
-    <div class="container nav">
 
-        <a href="#inicio" class="logo-area">
-            <img src="LOGO.jpeg" class="logo" alt="Transportes Guliana">
-            <div class="logo-name">
-                TRANSPORTES <span>GULIANA</span>
-            </div>
-        </a>
+<div class="container nav">
 
-        <a
-            class="nav-btn"
-            href="https://wa.me/56966211459?text=Hola%2C%20encontr%C3%A9%20Transportes%20Guliana%20en%20Google%20y%20quisiera%20cotizar%20un%20flete%20o%20mudanza."
-            target="_blank">
-            COTIZAR
-        </a>
+<a href="#inicio" class="logo-area">
 
-    </div>
+<img
+    src="LOGO.jpeg"
+    class="logo"
+    alt="Transportes Guliana">
+
+<div class="logo-name">
+    TRANSPORTES <span>GULIANA</span>
+</div>
+
+</a>
+
+
+<a
+    class="nav-btn"
+    href="https://wa.me/56966211459?text=Hola%2C%20encontr%C3%A9%20Transportes%20Guliana%20en%20Google%20y%20quisiera%20cotizar%20un%20flete%20o%20mudanza."
+    target="_blank"
+    rel="noopener">
+
+<svg
+    class="wa-icon"
+    viewBox="0 0 32 32"
+    aria-hidden="true">
+
+<circle
+    cx="16"
+    cy="16"
+    r="15"
+    fill="#ffffff"/>
+
+<path
+    d="M10.4 8.7c-.5 0-.9.3-1.1.8-.4 1-.7 2.1-.4 3.4.5 2.3 2 4.8 4.1 6.9 2.1 2.1 4.6 3.6 6.9 4.1 1.3.3 2.4 0 3.4-.4.5-.2.8-.6.8-1.1v-2c0-.4-.2-.7-.6-.9l-2.5-1.1c-.4-.2-.8-.1-1.1.2l-1.1 1.1c-1.7-.8-3-2-3.8-3.8l1.1-1.1c.3-.3.4-.7.2-1.1l-1.1-2.5c-.2-.4-.5-.6-.9-.6h-2z"
+    fill="#25D366"/>
+
+</svg>
+
+COTIZAR AHORA POR WHATSAPP
+
+</a>
+
+</div>
+
 </header>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <main id="inicio">
 
+
 <section class="hero">
 
-    <div class="container">
+<div class="container">
 
-        <div class="hero-content">
-
-            <div class="badge">
-                FLETES Y MUDANZAS EN SANTIAGO
-            </div>
-
-            <h1>
-                Tu traslado.<br>
-                <span>En buenas manos.</span>
-            </h1>
-
-            <p class="hero-text">
-                Transportamos tus muebles, electrodomésticos y pertenencias
-                de forma rápida, segura y responsable.
-            </p>
-
-            <a
-                class="cta"
-                href="https://wa.me/56966211459?text=Hola%2C%20encontr%C3%A9%20Transportes%20Guliana%20en%20Google%20y%20quisiera%20cotizar%20un%20flete%20o%20mudanza."
-                target="_blank">
-                COTIZAR POR WHATSAPP
-            </a>
-
-            <div class="hero-location">
-                Santiago y Región Metropolitana
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
+<div class="hero-content">
 
 
-<!-- STRIP -->
+<div class="badge">
+FLETES Y MUDANZAS EN SANTIAGO
+</div>
 
-<div class="strip">
 
-    <div class="container strip-grid">
+<h1>
 
-        <div class="strip-item">
-            <strong>Fletes</strong>
-            <span>A domicilio</span>
-        </div>
+Tu traslado.<br>
 
-        <div class="strip-item">
-            <strong>Mudanzas</strong>
-            <span>Casas y departamentos</span>
-        </div>
+<span>En buenas manos.</span>
 
-        <div class="strip-item">
-            <strong>Santiago</strong>
-            <span>Región Metropolitana</span>
-        </div>
+</h1>
 
-    </div>
+
+<p class="hero-text">
+
+Transportamos tus muebles,
+electrodomésticos y pertenencias
+de forma rápida, segura y responsable.
+
+</p>
+
+
+<a
+    class="cta"
+    href="https://wa.me/56966211459?text=Hola%2C%20encontr%C3%A9%20Transportes%20Guliana%20en%20Google%20y%20quisiera%20cotizar%20un%20flete%20o%20mudanza."
+    target="_blank"
+    rel="noopener">
+
+
+<svg
+    class="wa-icon"
+    viewBox="0 0 32 32"
+    aria-hidden="true">
+
+<circle
+    cx="16"
+    cy="16"
+    r="15"
+    fill="#ffffff"/>
+
+<path
+    d="M10.4 8.7c-.5 0-.9.3-1.1.8-.4 1-.7 2.1-.4 3.4.5 2.3 2 4.8 4.1 6.9 2.1 2.1 4.6 3.6 6.9 4.1 1.3.3 2.4 0 3.4-.4.5-.2.8-.6.8-1.1v-2c0-.4-.2-.7-.6-.9l-2.5-1.1c-.4-.2-.8-.1-1.1.2l-1.1 1.1c-1.7-.8-3-2-3.8-3.8l1.1-1.1c.3-.3.4-.7.2-1.1l-1.1-2.5c-.2-.4-.5-.6-.9-.6h-2z"
+    fill="#25D366"/>
+
+</svg>
+
+COTIZAR AHORA POR WHATSAPP
+
+</a>
+
+
+<div class="hero-location">
+
+Santiago y Región Metropolitana
 
 </div>
 
 
-<!-- SERVICES -->
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     STRIP
+========================= -->
+
+<div class="strip">
+
+<div class="container strip-grid">
+
+
+<div class="strip-item">
+
+<strong>Fletes</strong>
+
+<span>A domicilio</span>
+
+</div>
+
+
+<div class="strip-item">
+
+<strong>Mudanzas</strong>
+
+<span>Casas y departamentos</span>
+
+</div>
+
+
+<div class="strip-item">
+
+<strong>Santiago</strong>
+
+<span>Región Metropolitana</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     SERVICIOS
+========================= -->
 
 <section class="services">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-header">
-            <small>Nuestros servicios</small>
 
-            <h2>
-                Soluciones para tu traslado
-            </h2>
+<div class="section-header">
 
-            <p>
-                Cuéntanos qué necesitas transportar y coordinamos
-                contigo el servicio.
-            </p>
-        </div>
+<small>Nuestros servicios</small>
 
-        <div class="services-grid">
+<h2>
+Soluciones para tu traslado
+</h2>
 
-            <div class="service">
-                <div class="service-number">01</div>
-                <h3>Fletes a domicilio</h3>
-                <p>
-                    Traslado de tus pertenencias desde el punto
-                    de origen hasta tu destino.
-                </p>
-            </div>
+<p>
+Cuéntanos qué necesitas transportar
+y coordinamos contigo el servicio.
+</p>
 
-            <div class="service">
-                <div class="service-number">02</div>
-                <h3>Mudanzas</h3>
-                <p>
-                    Mudanzas de casas y departamentos en Santiago
-                    y la Región Metropolitana.
-                </p>
-            </div>
+</div>
 
-            <div class="service">
-                <div class="service-number">03</div>
-                <h3>Traslado de muebles</h3>
-                <p>
-                    Transporte de muebles y objetos de diferentes
-                    tamaños.
-                </p>
-            </div>
 
-            <div class="service">
-                <div class="service-number">04</div>
-                <h3>Electrodomésticos</h3>
-                <p>
-                    Traslado de refrigeradores, lavadoras,
-                    cocinas y otros electrodomésticos.
-                </p>
-            </div>
+<div class="services-grid">
 
-            <div class="service">
-                <div class="service-number">05</div>
-                <h3>Traslado de pertenencias</h3>
-                <p>
-                    Transportamos tus objetos y pertenencias
-                    hasta el lugar que necesites.
-                </p>
-            </div>
 
-            <div class="service">
-                <div class="service-number">06</div>
-                <h3>Cotización por WhatsApp</h3>
-                <p>
-                    Escríbenos directamente y cuéntanos qué
-                    necesitas trasladar.
-                </p>
-            </div>
+<div class="service">
 
-        </div>
+<div class="service-number">
+01
+</div>
 
-    </div>
+<h3>
+Fletes a domicilio
+</h3>
+
+<p>
+Traslado de tus pertenencias desde
+el punto de origen hasta tu destino.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">
+02
+</div>
+
+<h3>
+Mudanzas
+</h3>
+
+<p>
+Mudanzas de casas y departamentos
+en Santiago y la Región Metropolitana.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">
+03
+</div>
+
+<h3>
+Traslado de muebles
+</h3>
+
+<p>
+Transporte de muebles y objetos
+de diferentes tamaños.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">
+04
+</div>
+
+<h3>
+Electrodomésticos
+</h3>
+
+<p>
+Traslado de refrigeradores,
+lavadoras, cocinas y otros
+electrodomésticos.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">
+05
+</div>
+
+<h3>
+Traslado de pertenencias
+</h3>
+
+<p>
+Transportamos tus objetos y
+pertenencias hasta el lugar
+que necesites.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">
+06
+</div>
+
+<h3>
+Cotización por WhatsApp
+</h3>
+
+<p>
+Escríbenos directamente y
+cuéntanos qué necesitas trasladar.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- GALLERY -->
+<!-- =========================
+     GALERÍA
+========================= -->
 
 <section class="gallery">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-header">
-            <small>Trabajo real</small>
 
-            <h2>
-                Transportes Guliana en acción
-            </h2>
+<div class="section-header">
 
-            <p>
-                Algunas imágenes de nuestros vehículos y trabajos.
-            </p>
-        </div>
+<small>Trabajo real</small>
 
-        <div class="gallery-grid">
+<h2>
+Transportes Guliana en acción
+</h2>
 
-            <div class="photo">
-                <img src="camion-4.jpeg" alt="Transportes Guliana">
-            </div>
+<p>
+Conoce nuestros vehículos y algunos
+de los trabajos realizados.
+</p>
 
-            <div class="photo">
-                <img src="camion-5.jpeg" alt="Fletes Transportes Guliana">
-            </div>
+</div>
 
-            <div class="photo">
-                <img src="camion-6.jpeg" alt="Mudanzas Transportes Guliana">
-            </div>
 
-            <div class="photo">
-                <img src="camion-4.jpeg" alt="Camión de Transportes Guliana">
-            </div>
+<div class="gallery-grid">
 
-            <div class="photo">
-                <img src="camion-5.jpeg" alt="Traslado de muebles">
-            </div>
 
-            <div class="photo">
-                <img src="camion-6.jpeg" alt="Fletes y mudanzas en Santiago">
-            </div>
+<div class="photo">
 
-        </div>
+<img
+    src="camion-1.jpeg"
+    alt="Transportes Guliana">
 
-    </div>
+</div>
+
+
+<div class="photo">
+
+<img
+    src="camion-2.jpeg"
+    alt="Fletes Transportes Guliana">
+
+</div>
+
+
+<div class="photo">
+
+<img
+    src="camion-3.jpeg"
+    alt="Mudanzas Transportes Guliana">
+
+</div>
+
+
+<div class="photo">
+
+<img
+    src="camion-4.jpeg"
+    alt="Camión Transportes Guliana">
+
+</div>
+
+
+<div class="photo">
+
+<img
+    src="camion-5.jpeg"
+    alt="Traslado de muebles Transportes Guliana">
+
+</div>
+
+
+<div class="photo">
+
+<img
+    src="camion-6.jpeg"
+    alt="Fletes y mudanzas en Santiago">
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- PRESENTATION -->
+<!-- =========================
+     PRESENTACIÓN
+========================= -->
 
 <section class="presentation">
 
-    <div class="container">
+<div class="container">
 
-        <div class="presentation-grid">
 
-            <div class="presentation-image">
+<div class="presentation-grid">
 
-                <img
-                    src="camion-5.jpeg"
-                    alt="Transportes Guliana realizando un traslado">
 
-            </div>
+<div class="presentation-image">
 
-            <div class="presentation-text">
+<img
+    src="camion-5.jpeg"
+    alt="Transportes Guliana realizando un traslado">
 
-                <h2>
-                    Tu mudanza merece
-                    <span>un buen traslado.</span>
-                </h2>
+</div>
 
-                <p>
-                    Sabemos que trasladar tus cosas requiere cuidado
-                    y coordinación. Por eso buscamos entregar un
-                    servicio directo y responsable.
-                </p>
 
-                <div class="feature">
+<div class="presentation-text">
 
-                    <div class="feature-icon">✓</div>
 
-                    <div>
-                        <h3>Atención directa</h3>
-                        <p>
-                            Comunícate directamente por WhatsApp.
-                        </p>
-                    </div>
+<h2>
 
-                </div>
+Tu mudanza merece
 
-                <div class="feature">
+<span>
+un buen traslado.
+</span>
 
-                    <div class="feature-icon">✓</div>
+</h2>
 
-                    <div>
-                        <h3>Servicio a domicilio</h3>
-                        <p>
-                            Coordinamos el traslado desde el origen
-                            hasta el destino.
-                        </p>
-                    </div>
 
-                </div>
+<p>
 
-                <div class="feature">
+Sabemos que trasladar tus cosas requiere
+cuidado y coordinación. Por eso buscamos
+entregar un servicio directo y responsable.
 
-                    <div class="feature-icon">✓</div>
+</p>
 
-                    <div>
-                        <h3>Santiago y Región Metropolitana</h3>
-                        <p>
-                            Servicio orientado a clientes de Santiago
-                            y sus alrededores.
-                        </p>
-                    </div>
 
-                </div>
+<div class="feature">
 
-            </div>
+<div class="feature-icon">
+✓
+</div>
 
-        </div>
+<div>
 
-    </div>
+<h3>
+Atención directa
+</h3>
+
+<p>
+Comunícate directamente por WhatsApp.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">
+✓
+</div>
+
+<div>
+
+<h3>
+Servicio a domicilio
+</h3>
+
+<p>
+Coordinamos el traslado desde el origen
+hasta el destino.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">
+✓
+</div>
+
+<div>
+
+<h3>
+Santiago y Región Metropolitana
+</h3>
+
+<p>
+Servicio orientado a clientes de Santiago
+y sus alrededores.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- PROCESS -->
+<!-- =========================
+     PROCESO
+========================= -->
 
 <section class="process">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-header">
 
-            <small>Cómo cotizar</small>
+<div class="section-header">
 
-            <h2>
-                Fácil y directo
-            </h2>
+<small>
+Cómo cotizar
+</small>
 
-        </div>
+<h2>
+Fácil y directo
+</h2>
 
-        <div class="process-grid">
+</div>
 
-            <div class="process-card">
 
-                <div class="process-number">1</div>
+<div class="process-grid">
 
-                <h3>Escríbenos</h3>
 
-                <p>
-                    Haz clic en WhatsApp y contáctanos directamente.
-                </p>
+<div class="process-card">
 
-            </div>
+<div class="process-number">
+1
+</div>
 
-            <div class="process-card">
+<h3>
+Escríbenos
+</h3>
 
-                <div class="process-number">2</div>
+<p>
+Haz clic en WhatsApp y contáctanos
+directamente.
+</p>
 
-                <h3>Cuéntanos qué necesitas</h3>
+</div>
 
-                <p>
-                    Indica origen, destino y qué necesitas transportar.
-                </p>
 
-            </div>
+<div class="process-card">
 
-            <div class="process-card">
+<div class="process-number">
+2
+</div>
 
-                <div class="process-number">3</div>
+<h3>
+Cuéntanos qué necesitas
+</h3>
 
-                <h3>Recibe tu cotización</h3>
+<p>
+Indica origen, destino y qué necesitas
+transportar.
+</p>
 
-                <p>
-                    Coordinamos contigo los detalles del servicio.
-                </p>
+</div>
 
-            </div>
 
-        </div>
+<div class="process-card">
 
-    </div>
+<div class="process-number">
+3
+</div>
+
+<h3>
+Recibe tu cotización
+</h3>
+
+<p>
+Coordinamos contigo los detalles
+del servicio.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- FINAL CTA -->
+<!-- =========================
+     CTA FINAL
+========================= -->
 
 <section class="final-cta">
 
-    <div class="container">
+<div class="container">
 
-        <h2>
-            ¿Necesitas un flete o mudanza?
-        </h2>
 
-        <p>
-            Escríbenos por WhatsApp y cuéntanos qué necesitas trasladar.
-        </p>
+<h2>
+¿Necesitas un flete o mudanza?
+</h2>
 
-        <a
-            class="dark-btn"
-            href="https://wa.me/56966211459?text=Hola%2C%20encontr%C3%A9%20Transportes%20Guliana%20en%20Google%20y%20quisiera%20cotizar%20un%20flete%20o%20mudanza."
-            target="_blank">
-            COTIZAR POR WHATSAPP
-        </a>
 
-    </div>
+<p>
+Escríbenos por WhatsApp y cuéntanos
+qué necesitas trasladar.
+</p>
+
+
+<a
+    class="dark-btn"
+    href="https://wa.me/56966211459?text=Hola%2C%20encontr%C3%A9%20Transportes%20Guliana%20en%20Google%20y%20quisiera%20cotizar%20un%20flete%20o%20mudanza."
+    target="_blank"
+    rel="noopener">
+
+
+<svg
+    class="wa-icon"
+    viewBox="0 0 32 32"
+    aria-hidden="true">
+
+<circle
+    cx="16"
+    cy="16"
+    r="15"
+    fill="#ffffff"/>
+
+<path
+    d="M10.4 8.7c-.5 0-.9.3-1.1.8-.4 1-.7 2.1-.4 3.4.5 2.3 2 4.8 4.1 6.9 2.1 2.1 4.6 3.6 6.9 4.1 1.3.3 2.4 0 3.4-.4.5-.2.8-.6.8-1.1v-2c0-.4-.2-.7-.6-.9l-2.5-1.1c-.4-.2-.8-.1-1.1.2l-1.1 1.1c-1.7-.8-3-2-3.8-3.8l1.1-1.1c.3-.3.4-.7.2-1.1l-1.1-2.5c-.2-.4-.5-.6-.9-.6h-2z"
+    fill="#25D366"/>
+
+</svg>
+
+COTIZAR AHORA POR WHATSAPP
+
+</a>
+
+
+</div>
 
 </section>
+
 
 </main>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
-    <img
-        src="LOGO.jpeg"
-        class="footer-logo"
-        alt="Transportes Guliana">
 
-    <h3>
-        TRANSPORTES GULIANA
-    </h3>
+<img
+    src="LOGO.jpeg"
+    class="footer-logo"
+    alt="Transportes Guliana">
 
-    <p>
-        Fletes y Mudanzas en Santiago
-    </p>
 
-    <a
-        class="whatsapp-number"
-        href="https://wa.me/56966211459"
-        target="_blank">
-        WhatsApp: +56 9 6621 1459
-    </a>
+<h3>
+TRANSPORTES GULIANA
+</h3>
 
-    <p style="margin-top:25px;">
-        © 2026 Transportes Guliana
-    </p>
+
+<p>
+Fletes y Mudanzas en Santiago
+</p>
+
+
+<a
+    class="whatsapp-number"
+    href="https://wa.me/56966211459"
+    target="_blank"
+    rel="noopener">
+
+
+<svg
+    class="wa-icon"
+    viewBox="0 0 32 32"
+    aria-hidden="true">
+
+<circle
+    cx="16"
+    cy="16"
+    r="15"
+    fill="#25D366"/>
+
+<path
+    d="M10.4 8.7c-.5 0-.9.3-1.1.8-.4 1-.7 2.1-.4 3.4.5 2.3 2 4.8 4.1 6.9 2.1 2.1 4.6 3.6 6.9 4.1 1.3.3 2.4 0 3.4-.4.5-.2.8-.6.8-1.1v-2c0-.4-.2-.7-.6-.9l-2.5-1.1c-.4-.2-.8-.1-1.1.2l-1.1 1.1c-1.7-.8-3-2-3.8-3.8l1.1-1.1c.3-.3.4-.7.2-1.1l-1.1-2.5c-.2-.4-.5-.6-.9-.6h-2z"
+    fill="#ffffff"/>
+
+</svg>
+
+WhatsApp: +56 9 6621 1459
+
+</a>
+
+
+<p style="margin-top:25px;">
+© 2026 Transportes Guliana
+</p>
+
 
 </footer>
 
 
-<!-- WHATSAPP -->
+<!-- =========================
+     WHATSAPP FLOTANTE
+========================= -->
 
 <a
     class="whatsapp"
     href="https://wa.me/56966211459?text=Hola%2C%20encontr%C3%A9%20Transportes%20Guliana%20en%20Google%20y%20quisiera%20cotizar%20un%20flete%20o%20mudanza."
     target="_blank"
+    rel="noopener"
     aria-label="Contactar por WhatsApp">
-    WA
+
+
+<svg
+    class="wa-icon-large"
+    viewBox="0 0 32 32"
+    aria-hidden="true">
+
+<circle
+    cx="16"
+    cy="16"
+    r="15"
+    fill="#ffffff"/>
+
+<path
+    d="M10.4 8.7c-.5 0-.9.3-1.1.8-.4 1-.7 2.1-.4 3.4.5 2.3 2 4.8 4.1 6.9 2.1 2.1 4.6 3.6 6.9 4.1 1.3.3 2.4 0 3.4-.4.5-.2.8-.6.8-1.1v-2c0-.4-.2-.7-.6-.9l-2.5-1.1c-.4-.2-.8-.1-1.1.2l-1.1 1.1c-1.7-.8-3-2-3.8-3.8l1.1-1.1c.3-.3.4-.7.2-1.1l-1.1-2.5c-.2-.4-.5-.6-.9-.6h-2z"
+    fill="#25D366"/>
+
+</svg>
+
+
 </a>
+
 
 </body>
 </html>
